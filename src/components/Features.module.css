@@ -1,0 +1,396 @@
+.section {
+  padding: 64px 0;
+  background: var(--section-bg);
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--card-bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-subtle);
+}
+
+.iconPill {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.iconPink { composes: iconPill; background: var(--accent-pink); }
+.iconBlue { composes: iconPill; background: var(--accent-blue); }
+.iconGreen { composes: iconPill; background: var(--accent-green); }
+
+.featureTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.featureDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.imgBox {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.featureImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Chat Preview ─────────────────────────────────────────────────────── */
+.chatBox {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 10px;
+}
+
+.chatDocInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.docAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.775rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docName {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.docStatus {
+  font-size: 0.725rem;
+  color: #10B981;
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+.hipaaBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent-green-text);
+  background: var(--accent-green);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chatBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 160px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 85%;
+  font-size: 0.825rem;
+}
+
+.bubble p {
+  color: inherit;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.bubbleDoctor {
+  composes: bubble;
+  background: var(--primary-tint);
+  color: var(--text-main);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.bubbleDoctor p {
+  color: var(--text-main);
+}
+
+.bubbleUser {
+  composes: bubble;
+  background: var(--primary);
+  color: #FFFFFF;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.bubbleUser p {
+  color: #FFFFFF;
+}
+
+.chatTime {
+  display: block;
+  font-size: 0.65rem;
+  opacity: 0.7;
+  margin-top: 2px;
+  text-align: right;
+}
+
+.chatInputRow {
+  display: flex;
+  gap: 6px;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 7px 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  outline: none;
+  font-family: inherit;
+  background: var(--input-bg);
+  color: var(--text-main);
+}
+
+.sendBtn {
+  padding: 7px 14px;
+  background: var(--primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  font-size: 0.775rem;
+  font-weight: 600;
+}
+.wideCard {
+  composes: card;
+  margin-bottom: 24px;
+}
+
+.wideCardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-main);
+}
+
+.dashboardImg {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Bottom Grid ──────────────────────────────────────────────────────── */
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.15fr;
+  gap: 20px;
+}
+
+.miniCard {
+  composes: card;
+  padding: 24px;
+}
+
+.miniIconBox {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.miniCard h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.rxPill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-light);
+  margin-top: 14px;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+.activeStatus {
+  color: var(--accent-green-text);
+  font-weight: 700;
+}
+
+.flagsRow {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.flagChip {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ── Purple CTA Card ──────────────────────────────────────────────────── */
+.ctaPurple {
+  background: linear-gradient(135deg, #6E44FF 0%, #A855F7 100%);
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.ctaPurple:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(110, 68, 255, 0.35);
+}
+
+.purpleTag {
+  font-size: 0.675rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+}
+
+.ctaPurple h3 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.ctaPurple p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.825rem;
+}
+
+.purpleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.arrowCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.ctaPurple:hover .arrowCircle {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .topGrid,
+  .wideCardGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 20px;
+  }
+}

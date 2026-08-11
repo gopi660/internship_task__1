@@ -1,0 +1,319 @@
+.section {
+  padding: 32px 0 64px 0;
+  position: relative;
+}
+
+.topTag {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 44px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.leftCard {
+  composes: card;
+  background: var(--primary-tint);
+  border: 1px solid var(--border-light);
+}
+
+[data-theme="dark"] .leftCard {
+  background: var(--card-bg-alt);
+}
+
+.cardBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--card-bg);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  width: fit-content;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.ctaWrap {
+  margin-bottom: 32px;
+}
+
+.heroBtn {
+  padding: 14px 32px;
+  font-size: 0.95rem;
+}
+
+/* Happy Customers Widget */
+.customersWidget {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatarGroup img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--card-bg);
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.avatarGroup img:first-child {
+  margin-left: 0;
+}
+
+.avatarMore {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--card-bg);
+  margin-left: -8px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ratingScore {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-left: 4px;
+  color: var(--text-main);
+}
+
+.customerText {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Right Card */
+.rightCard {
+  composes: card;
+  background: var(--primary-light);
+  border: 1px solid var(--border-light);
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 440px;
+}
+
+[data-theme="dark"] .rightCard {
+  background: var(--card-bg-alt);
+}
+
+.doctorWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.doctorImg {
+  max-height: 420px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.floatingBadge {
+  position: absolute;
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.doctorStatus {
+  composes: floatingBadge;
+  top: 20px;
+  left: 20px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.statusText strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-main);
+}
+
+.statusText span {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+.callWidget {
+  composes: floatingBadge;
+  bottom: 24px;
+  right: 20px;
+}
+
+.callAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.callDetails strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-main);
+}
+
+.callDetails span {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+.callActionBtn {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: #FFFFFF;
+  font-size: 0.725rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(110, 68, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.callActionBtn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.04);
+}
+
+.verifiedBadge {
+  composes: floatingBadge;
+  bottom: 24px;
+  left: 20px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--text-main);
+  padding: 8px 12px;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.6rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .rightCard {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+  .card {
+    padding: 24px;
+  }
+  .cardHeading {
+    font-size: 1.4rem;
+  }
+  .doctorStatus,
+  .verifiedBadge {
+    display: none;
+  }
+}

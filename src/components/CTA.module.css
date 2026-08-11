@@ -1,0 +1,115 @@
+.section {
+  padding: 32px 0 64px 0;
+  background: var(--section-bg-alt);
+}
+
+.banner {
+  position: relative;
+  background: linear-gradient(135deg, #6E44FF 0%, #804DFE 50%, #9A5CFF 100%);
+  border-radius: var(--radius-lg);
+  padding: 60px 36px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(110, 68, 255, 0.2);
+}
+
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.sphere1 {
+  composes: sphere;
+  width: 180px;
+  height: 180px;
+  top: -40px;
+  left: -30px;
+}
+
+.sphere2 {
+  composes: sphere;
+  width: 150px;
+  height: 150px;
+  bottom: -40px;
+  right: -20px;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 34px;
+  border-radius: var(--radius-pill);
+  background: #FFFFFF;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  background: #F8F9FC;
+}
+
+.ctaBtn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 20px;
+  }
+  .headline {
+    font-size: 1.85rem;
+  }
+}

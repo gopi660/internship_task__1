@@ -1,0 +1,261 @@
+.wrapper {
+  background: var(--section-bg-alt);
+  padding-top: 16px;
+}
+
+.connectBanner {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-sm);
+}
+
+.connectBanner h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.connectBanner p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.darkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-dark);
+  color: #FFFFFF;
+  border: 1px solid var(--bg-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.darkBtn:hover {
+  background: #1E293B;
+}
+
+/* ── Main Dark Footer ─────────────────────────────────────────────────── */
+.main {
+  background: var(--bg-dark);
+  color: #94A3B8;
+  padding: 64px 0 36px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 36px;
+  margin-bottom: 48px;
+}
+
+.brandCol .brandLogo {
+  height: 36px;
+  margin-bottom: 14px;
+}
+
+.brandBio {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  margin-bottom: 20px;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+/* Newsletter */
+.newsletter {
+  background: var(--bg-dark-card);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.newsletterLabel {
+  display: block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 6px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  flex: 1;
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup:focus-within {
+  border-color: var(--primary);
+}
+
+.mailIcon {
+  color: #64748B;
+}
+
+.emailInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+.subscribeBtn {
+  padding: 6px 14px;
+  background: var(--primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  font-size: 0.775rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.subscribeBtn:hover {
+  background: var(--primary-hover);
+}
+
+.subscribeSuccess {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #10B981;
+  font-weight: 600;
+}
+
+/* Links Columns */
+.linksCol h4 {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.linksCol ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linksCol a {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  transition: color 0.2s ease;
+}
+
+.linksCol a:hover {
+  color: #FFFFFF;
+}
+
+
+/* Bottom Bar */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.appBadges {
+  display: flex;
+  gap: 10px;
+}
+
+.appPill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.appPill:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.socialLinks a {
+  font-size: 0.8rem;
+  color: #64748B;
+  transition: color 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .connectBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .bottomBar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .connectBanner {
+    padding: 24px 20px;
+  }
+  .connectBanner h2 {
+    font-size: 1.5rem;
+  }
+}
