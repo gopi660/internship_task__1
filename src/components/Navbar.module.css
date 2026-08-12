@@ -231,19 +231,43 @@
   box-shadow: var(--shadow-lg);
   padding: 20px;
   z-index: 999;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.mobileSearchBox {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobileSearchBox .search {
+  display: flex;
+  width: 100%;
+  background: var(--card-bg-alt);
+}
+
+.mobileSearchResults {
+  background: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-top: 8px;
+  max-height: 220px;
+  overflow-y: auto;
 }
 
 .mobileNavLinks {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .mobileNavLinks a {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-main);
-  padding: 8px 0;
+  padding: 10px 0;
+  display: block;
 }
 
 .mobileNavLinks a:hover {
@@ -270,9 +294,33 @@
     display: none;
   }
   .mobileToggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background: var(--card-bg-alt);
+    border: 1px solid var(--border-light);
   }
   .navCta {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandLogo {
+    height: 30px;
+  }
+  .actions {
+    gap: 8px;
+  }
+  .iconBtn {
+    width: 34px;
+    height: 34px;
+  }
+  .mobileToggle {
+    width: 34px;
+    height: 34px;
   }
 }

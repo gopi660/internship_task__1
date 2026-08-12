@@ -229,6 +229,56 @@ const Navbar = ({ onOpenBooking }) => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
+            {/* Mobile Search */}
+            <div className={styles.mobileSearchBox}>
+              <div className={styles.search}>
+                <Search className={styles.searchIcon} size={16} aria-hidden="true" />
+                <input
+                  type="text"
+                  placeholder="Search doctor or service..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className={styles.searchInput}
+                  aria-label="Search doctors or services"
+                />
+                {searchQuery && (
+                  <button
+                    className={styles.clearSearch}
+                    onClick={() => setSearchQuery('')}
+                    aria-label="Clear search"
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
+              {searchQuery.trim() && (
+                <div className={styles.mobileSearchResults}>
+                  {filteredResults.length > 0 ? (
+                    filteredResults.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className={styles.searchResultItem}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          handleSelectSearchResult(item);
+                        }}
+                      >
+                        <div className={styles.resultMain}>
+                          <span className={styles.resultTitle}>{item.name}</span>
+                          <span className={styles.resultType}>{item.type}</span>
+                        </div>
+                        <ChevronRight size={14} className={styles.resultArrow} />
+                      </div>
+                    ))
+                  ) : (
+                    <div className={styles.noResults}>
+                      No doctors or services found for "{searchQuery}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <nav className={styles.mobileNavLinks} aria-label="Mobile navigation">
               {navItems.map((item, i) => (
                 <a

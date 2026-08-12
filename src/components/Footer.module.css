@@ -17,14 +17,14 @@
 }
 
 .connectBanner h2 {
-  font-size: 1.85rem;
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
   font-weight: 800;
   margin-bottom: 4px;
   color: var(--text-main);
 }
 
 .connectBanner p {
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 2vw, 0.9rem);
   color: var(--text-muted);
 }
 
@@ -32,6 +32,7 @@
   display: flex;
   gap: 12px;
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .darkBtn {
@@ -40,6 +41,7 @@
   justify-content: center;
   gap: 8px;
   padding: 12px 26px;
+  min-height: 44px;
   border-radius: var(--radius-pill);
   background: var(--bg-dark);
   color: #FFFFFF;
@@ -47,6 +49,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.25s ease;
+  touch-action: manipulation;
 }
 
 .darkBtn:hover {
@@ -57,7 +60,7 @@
 .main {
   background: var(--bg-dark);
   color: #94A3B8;
-  padding: 64px 0 36px 0;
+  padding: clamp(40px, 6vw, 64px) 0 36px 0;
 }
 
 .grid {
@@ -99,6 +102,7 @@
 .newsletterForm {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .inputGroup {
@@ -110,6 +114,7 @@
   padding: 6px 10px;
   border-radius: var(--radius-pill);
   flex: 1;
+  min-width: 160px;
   transition: border-color 0.2s ease;
 }
 
@@ -132,7 +137,7 @@
 }
 
 .subscribeBtn {
-  padding: 6px 14px;
+  padding: 8px 16px;
   background: var(--primary);
   color: #FFFFFF;
   border-radius: var(--radius-pill);
@@ -182,7 +187,6 @@
   color: #FFFFFF;
 }
 
-
 /* Bottom Bar */
 .bottomBar {
   display: flex;
@@ -202,6 +206,7 @@
 .appBadges {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .appPill {
@@ -236,7 +241,11 @@
 
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .brandCol {
+    grid-column: span 3;
   }
   .connectBanner {
     flex-direction: column;
@@ -246,16 +255,27 @@
 
 @media (max-width: 640px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .brandCol {
+    grid-column: span 2;
   }
   .bottomBar {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
   .connectBanner {
     padding: 24px 20px;
   }
-  .connectBanner h2 {
-    font-size: 1.5rem;
+}
+
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .brandCol {
+    grid-column: span 1;
   }
 }

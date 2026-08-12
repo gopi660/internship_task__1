@@ -353,6 +353,21 @@ function App() {
           from { opacity: 0; transform: scale(0.96); }
           to { opacity: 1; transform: scale(1); }
         }
+
+        @media (max-width: 480px) {
+          .modal-backdrop {
+            padding: 12px;
+          }
+          .modal-card {
+            padding: 24px 18px;
+            max-height: 92vh;
+            overflow-y: auto;
+          }
+          .form-row {
+            flex-direction: column;
+            gap: 0;
+          }
+        }
       `}</style>
     </div>
   );
