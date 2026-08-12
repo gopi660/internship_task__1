@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, ShieldCheck, Video, PhoneCall, CheckCircle2, Calendar } from 'lucide-react';
-import doctorImg from '../assets/doctor.png';
+import doctorImg from '../assets/doctor.webp';
 import styles from './Hero.module.css';
 
 const floatAnimation = {
@@ -126,6 +126,9 @@ const Hero = ({ onOpenBooking, onCallClick }) => {
                 className={styles.doctorImg}
                 width="380"
                 height="420"
+                fetchPriority="high"
+                loading="eager"
+                decoding="async"
               />
 
               {/* Floating Badges */}

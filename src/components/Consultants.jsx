@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Calendar, Star, CheckCircle2, UserCheck, ChevronRight } from 'lucide-react';
-import consultant1 from '../assets/consultant-1.jpg';
-import consultant2 from '../assets/consultant-2.jpg';
-import consultant3 from '../assets/consultant-3.jpg';
+import consultant1 from '../assets/consultant-1.webp';
+import consultant2 from '../assets/consultant-2.webp';
+import consultant3 from '../assets/consultant-3.webp';
 import styles from './Consultants.module.css';
 
 const doctors = [
@@ -120,6 +120,7 @@ const Consultants = ({ onOpenBooking, onCallClick }) => {
                   alt={`${doc.name}, ${doc.title}`}
                   className={styles.docImg}
                   loading="lazy"
+                  decoding="async"
                   width="400"
                   height="220"
                 />

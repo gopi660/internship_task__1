@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Smartphone, Shield, LayoutDashboard, FileText, Truck, ArrowRight, Check, Sparkles } from 'lucide-react';
-import feature1Img from '../assets/feature-1.png';
-import feature2Img from '../assets/feature-2.png';
+import feature1Img from '../assets/feature-1.webp';
+import feature2Img from '../assets/feature-2.webp';
 import styles from './Features.module.css';
 
 const cardVariants = {
@@ -78,6 +78,7 @@ const Features = ({ onOpenBooking }) => {
                 alt="Mobile Health App interface showing patient health tracking dashboard"
                 className={styles.featureImg}
                 loading="lazy"
+                decoding="async"
                 width="500"
                 height="220"
               />
@@ -197,6 +198,7 @@ const Features = ({ onOpenBooking }) => {
                 alt="Healthcare dashboard showing appointment scheduling and analytics"
                 className={styles.dashboardImg}
                 loading="lazy"
+                decoding="async"
                 width="560"
                 height="280"
               />
